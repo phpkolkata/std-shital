@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script language="javascript">
+      function say_hello() {
+        var nm = document.getElementById("nm");
+        var age = document.getElementById("age");
+
+        if (nm.value == "") {
+          alert("please enter your name");
+          nm.focus();
+        } else if (age.value == "") {
+          alert("Please enter your age");
+          age.focus();
+        } else if (isNaN(age.value)) {
+          alert("Please enter numeric value only.");
+        } else if (age.value > 99) {
+          alert("please enter age between 1-99");
+        } else {
+          alert("hello " + nm.value + ", your age is " + age.value);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Name: <input type="text" value="" id="nm" />
+    <br />
+    Age: <input type="text" value="" id="age" />
+    <br />
+    <button onclick="say_hello()">click here</button>
+  </body>
+</html>
