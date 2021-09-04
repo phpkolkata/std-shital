@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery way</title>
+  </head>
+  <body>
+    <h1>Option One</h1>
+    <p>
+      this is test para for jquery this is test para for jquery this is test
+      para for jquery this is test para for jquery this is test para for jquery
+      this is test para for jquery this is test para for jquery this is test
+      para for jquery this is test para for jquery this is test para for jquery
+    </p>
+    <h1>Option Two</h1>
+    <p>
+      this is test para for jquery this is test para for jquery this is test
+      para for jquery this is test para for jquery this is test para for jquery
+      this is test para for jquery this is test para for jquery this is test
+      para for jquery this is test para for jquery this is test para for jquery
+    </p>
+
+    <script src="jquery.js"></script>
+    <script>
+      $("document").ready(function () {
+        $("h1").click(function () {
+          //   alert("test");
+          //   $("p").hide();
+          $(this).next().hide();
+        });
+      });
+    </script>
+  </body>
+</html>
