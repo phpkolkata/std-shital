@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery way</title>
+    <style>
+      .box {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <b>bold 1</b>
+    <div class="one" id="xyz">
+      div 1
+      <b>bold 2</b>
+    </div>
+
+    <div class="two" id="abc">
+      div 2
+      <b>bold 3</b>
+    </div>
+
+    <div class="one">
+      div 3
+      <b>bold 4</b>
+      <p>para <b>para bold</b></p>
+    </div>
+    <b>bold 5</b>
+    <br />
+
+    <button id="btn">click</button>
+
+    <script src="jquery.js"></script>
+    <script>
+      $("document").ready(function () {
+        $("#btn").click(function () {
+          //   $("#abc, #xyz").css("background-color", "#f00");
+          //   $("b:last").css("background-color", "#f00");
+          //   $("b:odd").css("background-color", "#f00");
+          //   $("b:first-child").css("background-color", "#f00");
+          //   $("div > b").css("background-color", "#f00");
+          //   $("div  b").css("background-color", "#f00");
+          //   $("div  b").addClass("box");
+          //   $("div").after("<hr>");
+          //   alert($("div").html());
+          //   $("div").prop("class", "box");
+          //   $("div").removeAttr("class");
+          $("div").toggleClass("box");
+        });
+      });
+    </script>
+  </body>
+</html>
