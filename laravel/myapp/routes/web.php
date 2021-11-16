@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,13 @@ Route::get('home',function(){
 //     return view('master.layout');
 // });
 
-Route::get('/page1',[PageController::class,'page1']);
-Route::get('/page2',[PageController::class, 'page2'] );
+Route::get('/page1',[PageController::class,'page1'])->name('p1');
+Route::get('/page2/{id}',[PageController::class, 'page2'] );
 
+// form
+Route::get('/page3',[PageController::class, 'page3'] );
+Route::post('/page4',[PageController::class, 'page4'] );
+
+
+// resourceful controller route
+Route::resource('product', ProductController::class);
