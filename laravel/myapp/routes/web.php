@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,10 @@ Route::get('/page2/{id}',[PageController::class, 'page2'] );
 // form
 Route::get('/page3',[PageController::class, 'page3'] );
 Route::post('/page4',[PageController::class, 'page4'] );
+
+Route::get('/category',[CategoryController::class, 'index'] );
+Route::get('/category/add',[CategoryController::class, 'addForm'] );
+Route::post('/category',[CategoryController::class, 'adding'] );
 
 
 // resourceful controller route
