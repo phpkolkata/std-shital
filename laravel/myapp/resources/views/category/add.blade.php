@@ -1,4 +1,4 @@
-<form action="/category" method="post">
+<form action="/category" method="post" enctype="multipart/form-data">
     @csrf()
     Name:<input type="text" name="name"><br>
     isActive:
@@ -7,5 +7,9 @@
         <option value="n">No</option>
     </select>
     <br>
+    Image:<input type="file" name="im">
+    <br>
     <button>Add</button>
 </form>
+
+<img src="{{asset('storage/1.jpg')}}">

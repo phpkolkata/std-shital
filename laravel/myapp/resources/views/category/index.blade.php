@@ -16,6 +16,7 @@
                 <li class="list-group-item"> {{$d->id}}. {{$d->name}}</li>
             @endforeach
         </ul>
+        {{ $data->links() }}
     </div>
 </div>
 
